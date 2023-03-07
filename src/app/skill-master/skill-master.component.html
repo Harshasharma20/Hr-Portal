@@ -1,0 +1,50 @@
+<!--
+<h1 class="skill">Skill Master</h1>
+
+<form action="">
+
+<p>
+    <mat-form-field appearance="outline">
+      <mat-label>Outline form field</mat-label>
+      <h2> Add /Update Skill<input class="field-skill" matInput placeholder="Skill Name">
+     </h2>
+    </mat-form-field>
+  </p>
+</form>
+-->
+
+        <!-- <h1 class="skill">Skill Master</h1>
+            <mat-label class="label1">Add /Update Skill</mat-label>
+            <mat-form-field class="full-width" appearance="outline">
+               <input required name="skillName" matInput placeholder="Skill Name">               
+            </mat-form-field>
+            <div class="example-button-row">
+              <button mat-raised-button color="primary">Add</button>       
+              <button mat-raised-button color="primary">Update</button>         
+            </div> -->
+    
+            
+ {{skill | json}}
+<form #skillMasterForm="ngForm" (ngSubmit)="formSubmit()">
+  <h1 class="skill">Skill Master</h1> 
+    <div>
+    <mat-label class="label1">Add Update Skill</mat-label>
+    <mat-form-field class="full-width" appearance="outline">
+    <input required  [(ngModel)]="skill.skill_name" name="skill_name" matInput placeholder="Skill Name">  
+                    
+    </mat-form-field>
+    <button mat-raised-button color="primary">Add</button>       
+    <button mat-raised-button color="primary">Update</button>     
+  </div>
+</form>
+  
+
+
+
+           
+            
+                
+    
+          
+        
+    

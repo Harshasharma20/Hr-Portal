@@ -1,0 +1,28 @@
+.skill{
+    font-size: 50px;
+    padding-top: 80px;
+    margin-left: 80px;
+}
+
+.label1{
+    font-size: 20px;
+    margin-left: 80px;
+    margin-top: 50px;
+    text-indent: 20px;
+}
+
+.full-width{
+    margin-left: 20px;
+    width: 30%;
+}
+
+.example-button-row{
+    margin-left: 1090px;
+    display :flex;
+}
+.mat-raised-button{
+    padding-left: 300px;
+   
+}
+
+
