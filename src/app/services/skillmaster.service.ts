@@ -13,4 +13,9 @@ export class SkillmasterService {
   public addSkill(skill:any){
     return this.http.post(`${baseUrl}/api/create`,skill);
   }
+
+  public getSkill(){
+    return this.http.get("http://localhost:8080/api/getAllSkills");
+  }
+  
 }

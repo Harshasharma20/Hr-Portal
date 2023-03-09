@@ -24,5 +24,16 @@
     padding-left: 300px;
    
 }
+table {
+    width: 80%;
+    font-size: arial, sans-serif;
+    border-collapse: collapse;
+    margin: 80px;
+
+  }
+  td,th{
+    text-align: center;
+    padding: 8px;
+  }
 
 

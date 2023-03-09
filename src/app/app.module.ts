@@ -10,6 +10,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {MatTableModule} from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatInputModule,
     MatButtonModule,
     HttpClientModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    Ng2SearchPipeModule,
+    MatTableModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
