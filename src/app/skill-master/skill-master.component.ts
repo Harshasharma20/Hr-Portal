@@ -1,6 +1,7 @@
 
 import { Component,OnInit } from '@angular/core';
-import { SkillmasterService } from '../skillmaster.service'; 
+import { SkillmasterService } from '../services/skillmaster.service';
+
 @Component({
   selector: 'app-skill-master',
   templateUrl: './skill-master.component.html',
@@ -8,19 +9,29 @@ import { SkillmasterService } from '../skillmaster.service';
 })
 export class SkillMasterComponent implements OnInit{
 
+  constructor(private skillmasterService:SkillmasterService){}
+
   public skill = {
     skill_name:'',
   };
-
-  constructor(private skillData : SkillmasterService){
-
-  }
 
   ngOnInit(): void {}
 
   //function for adding skills:
 
   formSubmit(){
-    console.log(this.skill);
-  }
+  console.log(this.skill);
+
+    //call addSkill() : skillmasterService
+   this.skillmasterService.addSkill(this.skill).subscribe(
+    (data)=>{
+      console.log(data);
+      alert("success");
+    },
+    (error)=>{
+      console.log(error);
+      alert("Error");
+    }
+    )  
+}
 }

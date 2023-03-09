@@ -24,7 +24,7 @@
             </div> -->
     
             
- {{skill | json}}
+
 <form #skillMasterForm="ngForm" (ngSubmit)="formSubmit()">
   <h1 class="skill">Skill Master</h1> 
     <div>
@@ -32,11 +32,24 @@
     <mat-form-field class="full-width" appearance="outline">
     <input required  [(ngModel)]="skill.skill_name" name="skill_name" matInput placeholder="Skill Name">  
                     
-    </mat-form-field>
-    <button mat-raised-button color="primary">Add</button>       
-    <button mat-raised-button color="primary">Update</button>     
-  </div>
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button mat-raised-button color="primary">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+    <button mat-raised-button color="primary">Update</button>
+  </div>   
 </form>
+<!-- For List of Skills-->
+
+  <div>
+    <mat-label class="label1">List of Skills</mat-label>
+    <mat-form-field class="full-width" appearance="outline">
+    <input required [(ngModel)]="skill.skill_name" name="skill_name" matInput placeholder="Search Skill Name">  
+                    
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<button mat-raised-button color="primary">Search </button>    
+  </div>
+<!-- Pagination-->
+
+
   
 
 
