@@ -20,6 +20,7 @@ import com.job.publishing.service.SkillMasterService;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:4200")
 public class SkillMasterController {
 	
 	@Autowired
