@@ -1,22 +1,17 @@
 package com.job.publishing.entities;
 
-
-
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
 import jakarta.persistence.Table;
 
-
 @Entity
-@Table(name="skill_master")
 public class SkillMaster {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue
 	private int skill_id;
 	private String skill_name;
 	public int getSkill_id() {
@@ -38,7 +33,7 @@ public class SkillMaster {
 	}
 	public SkillMaster() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	

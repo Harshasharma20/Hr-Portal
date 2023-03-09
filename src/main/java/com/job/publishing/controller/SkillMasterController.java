@@ -26,6 +26,7 @@ public class SkillMasterController {
 	@Autowired
 	public SkillMasterService skillMasterService;
 	
+	
 	@PostMapping("/create")
 	public ResponseEntity<SkillMaster> createSkill(@RequestBody SkillMaster skill){
 		System.out.println("================= /create");
