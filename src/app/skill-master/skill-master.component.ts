@@ -16,7 +16,7 @@ export class SkillMasterComponent implements OnInit{
 
   constructor(private skillmasterService:SkillmasterService,private http:HttpClient){
    this.skillmasterService.getSkill().subscribe((data)=>{
-    console.log(data);
+    console.table(data);
     this.userSkills=data;
    })
   }
