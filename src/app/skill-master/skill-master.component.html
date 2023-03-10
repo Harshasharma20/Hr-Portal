@@ -38,36 +38,34 @@
   </div>   
 </form>
 <!-- For List of Skills-->
-<form #skillMaster="ngForm" (ngSubmit)="search()">
+<form #skillMaster="ngForm">
   <div>
     <mat-label class="label1">List of Skills</mat-label>
     <mat-form-field class="full-width" appearance="outline">
-    <input required name="search" matInput placeholder="Search Skill Name">                   
+    <input required type="text"[(ngModel)]="searchText" matInput placeholder="Search Skill Name">                   
     </mat-form-field>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<button mat-raised-button color="primary">Search </button>    
 
   </div>
+  <!-- Table-->
 <div class="container">
   <table class="mat-elevation-z8">
-    <thead>
        <tr>
         <th>Skill Name</th>
         <th>Update</th>
         <th>Delete</th>
-      </tr>
-       </thead>
-       
+      </tr> 
        <tbody>
-        <tr *ngFor="let skillMaster of skills">
-          <td>{{skillMaster.skill_name}}</td>
-          <td></td>
-          <td></td>
+        <tr *ngFor="let skill of userSkills | searchSkill: searchText">
+          <td>{{skill.skill_name}}</td>
+          <td>Link</td>
+          <td>Link</td>
         </tr>
        </tbody>
       </table>
    </div> 
   </form>
-<!-- Table-->
+
 
 
 

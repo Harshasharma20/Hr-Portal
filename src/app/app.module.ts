@@ -12,12 +12,14 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {MatTableModule} from '@angular/material/table';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchSkillPipe } from './search-skill.pipe'; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SkillMasterComponent
+    SkillMasterComponent,
+    SearchSkillPipe
   ],
   imports: [
     BrowserModule,

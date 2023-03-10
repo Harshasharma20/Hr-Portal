@@ -14,8 +14,10 @@ export class SkillmasterService {
     return this.http.post(`${baseUrl}/api/create`,skill);
   }
 
+  //get skill
   public getSkill(){
     return this.http.get("http://localhost:8080/api/getAllSkills");
   }
+
   
 }

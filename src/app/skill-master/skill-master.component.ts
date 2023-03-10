@@ -1,5 +1,5 @@
 
-import { Component,EventEmitter,OnInit, Output } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { SkillmasterService } from '../services/skillmaster.service';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -12,16 +12,20 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./skill-master.component.css']
 })
 export class SkillMasterComponent implements OnInit{
-  skills:any;
-  constructor(private skillmasterService:SkillmasterService,private activeRoute:ActivatedRoute,private http:HttpClient){}
+  userSkills:any=[];
+
+  constructor(private skillmasterService:SkillmasterService,private http:HttpClient){
+   this.skillmasterService.getSkill().subscribe((data)=>{
+    console.log(data);
+    this.userSkills=data;
+   })
+  }
 
   public skill = {
     skill_name:'',
   };
 
   ngOnInit(): void {
-   let response=this.http.get("http://localhost:8080/api/getAllSkills");
-   response.subscribe((data)=>this.skills=response);
   }
 
   //function for adding skills:
@@ -55,4 +59,9 @@ search(){
     alert("Error in searching data");
   })
 }
+
+
+searchText='';
+
+
 }
