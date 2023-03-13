@@ -13,13 +13,23 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {MatTableModule} from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SearchSkillPipe } from './search-skill.pipe'; 
+import { SearchSkillPipe } from './search-skill.pipe';
+import { UpdateSkillComponent } from './update-skill/update-skill.component'; 
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes:Routes=[
+  {
+    path:'update',
+    component:UpdateSkillComponent,
+  }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillMasterComponent,
-    SearchSkillPipe
+    SearchSkillPipe,
+    UpdateSkillComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +43,8 @@ import { SearchSkillPipe } from './search-skill.pipe';
     MatPaginatorModule,
     Ng2SearchPipeModule,
     MatTableModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

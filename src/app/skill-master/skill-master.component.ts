@@ -23,6 +23,8 @@ export class SkillMasterComponent implements OnInit{
 
   public skill = {
     skill_name:'',
+    skill_id:'',
+
   };
 
   ngOnInit(): void {
@@ -45,7 +47,7 @@ export class SkillMasterComponent implements OnInit{
     }
     )  
 }
-
+/*
 search(){
   this.skillmasterService.getSkill().subscribe(
     (data)=>{
@@ -60,8 +62,13 @@ search(){
   })
 }
 
-
+*/
 searchText='';
+
+onUpdateClicked(skill_id:any){
+ let currentSkill = this.userSkills.find((p:any)=>{return p.skill_id === skill_id});
+ console.log(currentSkill);
+}
 
 
 }
