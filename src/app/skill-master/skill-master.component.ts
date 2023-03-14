@@ -68,7 +68,13 @@ searchText='';
 onUpdateClicked(skill_id:any){
  let currentSkill = this.userSkills.find((p:any)=>{return p.skill_id === skill_id});
  console.log(currentSkill);
+
 }
+onDeleteClicked(skill_id:any){
+  this.userSkills.slice(skill_id-1,1)
 
-
+ this.skillmasterService.deleteSkill(skill_id).subscribe((data)=>{
+  console.log(data);
+ })
+}
 }

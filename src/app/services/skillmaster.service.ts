@@ -19,5 +19,8 @@ export class SkillmasterService {
     return this.http.get("http://localhost:8080/api/getAllSkills");
   }
 
-  
+  //delete skill
+  public deleteSkill(skill_id:any){
+    return this.http.delete(`${baseUrl}/api/${skill_id}`);
+  } 
 }

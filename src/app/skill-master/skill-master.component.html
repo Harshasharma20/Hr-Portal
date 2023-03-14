@@ -34,10 +34,10 @@
                     
     </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
     <button mat-raised-button color="primary">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
-   
+    <button mat-raised-button color="primary">Update</button>
   </div>   
 </form>
-<button mat-raised-button color="primary">Update</button>
+
 <!-- For List of Skills-->
 <form #skillMaster="ngForm">
   <div>
@@ -59,7 +59,7 @@
         <tr *ngFor="let skill of userSkills | searchSkill: searchText">
           <td>{{skill.skill_name}}</td>
           <td><mat-icon (click)="onUpdateClicked(skill.skill_id)"><a routerLink="/update"></a>create</mat-icon></td>
-          <td>Link</td>
+          <td><mat-icon (click)="onDeleteClicked(skill.skill_id)">delete</mat-icon></td>
         </tr>
        </tbody>
       </table>
