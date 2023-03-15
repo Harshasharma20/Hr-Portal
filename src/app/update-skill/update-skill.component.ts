@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SkillmasterService } from '../services/skillmaster.service';
 
 @Component({
   selector: 'app-update-skill',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./update-skill.component.css']
 })
 export class UpdateSkillComponent {
+
+  constructor(private skillMasterService: SkillmasterService){}
+
+ 
+
+
 
 }

@@ -9,7 +9,7 @@ export class SearchSkillPipe implements PipeTransform {
     if(!value) return null;
     if(!args) return value;
 
-    args=args.toLowerCase();
+    args=args.toLowerCase().split("*");
 
     return value.filter((item:any)=>{
       return JSON.stringify(item).toLowerCase().includes(args);

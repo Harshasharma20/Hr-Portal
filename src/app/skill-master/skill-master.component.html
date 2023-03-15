@@ -24,17 +24,17 @@
             </div> -->
     
             
-
+<!--Add Skills Form-->
 <form #skillMasterForm="ngForm" (ngSubmit)="formSubmit()">
   <h1 class="skill">Skill Master</h1> 
     <div>
     <mat-label class="label1">Add Update Skill</mat-label>
     <mat-form-field class="full-width" appearance="outline">
-    <input required  [(ngModel)]="skill.skill_name" name="skill_name" matInput placeholder="Skill Name">  
+    <input required [(ngModel)]="skill.skill_name" name="skill_name" matInput placeholder="Skill Name" maxlength="8" minlength="8" (keypress)="omit_special_char($event)">  
                     
     </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    <button mat-raised-button color="primary">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
-    <button mat-raised-button color="primary">Update</button>
+    <button mat-raised-button color="primary">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+    <button mat-raised-button color="primary">Update</button>  
   </div>   
 </form>
 
@@ -58,7 +58,7 @@
        <tbody>
         <tr *ngFor="let skill of userSkills | searchSkill: searchText">
           <td>{{skill.skill_name}}</td>
-          <td><mat-icon (click)="onUpdateClicked(skill.skill_id)"><a routerLink="/update"></a>create</mat-icon></td>
+          <td><a routerLink="/updateSkill"></a><mat-icon (click)="onUpdateClicked(skill.skill_id)">create</mat-icon></td>
           <td><mat-icon (click)="onDeleteClicked(skill.skill_id)">delete</mat-icon></td>
         </tr>
        </tbody>
